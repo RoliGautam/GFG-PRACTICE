@@ -8,13 +8,15 @@ int minDist(int arr[], int n, int x, int y) {
     {
         if(arr[i]==x || arr[i]==y)
         {
-            if( previousInd != -1 && arr[i] != arr[previousInd])
+            if( previousInd != -1 && arr[i] != arr[previousInd]){
                 min_distance = min(min_distance , i-previousInd);
+            }
         previousInd=i;
         }
     }
-    if(min_distance==INT_MAX)
+    if(min_distance==INT_MAX){
         return -1;
+    }
  
     return min_distance;
     }
